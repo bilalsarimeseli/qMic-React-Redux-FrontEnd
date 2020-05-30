@@ -8,6 +8,7 @@ const Types = {
   CHECK_HRAISE_STATUS: "CHECK_HRAISE_STATUS",
   GET_HRAISE_UPDATE: "GET_HRAISE_UPDATE",
   PERMIT_HRAISE: "PERMIT_HRAISE",
+  NULLIFY_HRAISE: "NULLIFY_HRAISE"
 };
 // actions
 const register = (id1) => ({
@@ -55,6 +56,11 @@ const permitHraise = (id9) => ({
   payload: id9,
 });
 
+const nullifyhraisepermit = (id10) => ({
+  type: Types.NULLIFY_HRAISE,
+  payload: id10,
+})
+
 export default {
   register,
   login,
@@ -64,5 +70,6 @@ export default {
   checkHraise,
   getHraise,
   permitHraise,
+  nullifyhraisepermit,
   Types,
 };
