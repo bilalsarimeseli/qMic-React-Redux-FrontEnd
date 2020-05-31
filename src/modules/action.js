@@ -31,34 +31,29 @@ const endMeeting = (id4) => ({
   payload: id4,
 });
 
-const createMeeting = (id5) => ({
-  type: Types.CREATE_MEETING,
+const handRaise = (id5) => ({
+  type: Types.HAND_RAISE,
   payload: id5,
 });
 
-const handRaise = (id6) => ({
-  type: Types.HAND_RAISE,
+const checkHraise = (id6) => ({
+  type: Types.CHECK_HRAISE_STATUS,
   payload: id6,
 });
 
-const checkHraise = (id7) => ({
-  type: Types.CHECK_HRAISE_STATUS,
+const getHraise = (id7) => ({
+  type: Types.GET_HRAISE_UPDATE,
   payload: id7,
 });
 
-const getHraise = (id8) => ({
-  type: Types.GET_HRAISE_UPDATE,
+const permitHraise = (id8) => ({
+  type: Types.PERMIT_HRAISE,
   payload: id8,
 });
 
-const permitHraise = (id9) => ({
-  type: Types.PERMIT_HRAISE,
-  payload: id9,
-});
-
-const nullifyhraisepermit = (id10) => ({
+const nullifyhraisepermit = (id9) => ({
   type: Types.NULLIFY_HRAISE,
-  payload: id10,
+  payload: id9,
 })
 
 export default {

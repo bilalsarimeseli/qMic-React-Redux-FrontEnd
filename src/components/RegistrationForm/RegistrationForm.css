@@ -1,10 +1,38 @@
 .loginText {
-    color: #007bff;
-    font-weight: bold;
+    color: #8205a8;
     cursor: pointer;
+    font-size: 10px;
+}
+#login {
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    padding-top: 1px;
 }
 
 .successMessage {
-    color: green;
+    color: rgb(2, 194, 2);
     font-weight: bold;
 }
+
+.buttondiv {
+    border: 3px solid rgb(206, 34, 34);
+    border-radius: 30%;
+    box-shadow: 2px 2px rgb(31, 91, 93);
+    width: 25%;
+    height: 6%;
+    padding: 1%;
+    margin-bottom: 10px; 
+    
+}
+
+#registerbtn {
+    background: rgb(226, 53, 226);
+    width: 150px;
+    font-size: 20px;
+    border-radius: 10%;
+    border: 3px solid rgb(255, 208, 119);
+    font-weight: 700;
+}
+
