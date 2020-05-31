@@ -9,6 +9,17 @@
     vertical-align: middle;
     padding-bottom: 3px;
     padding-top: 1px;
+    font-weight: 700;
+   
+}
+
+
+
+#emailHelp {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: lightgreen;
 }
 
 .successMessage {
@@ -24,6 +35,7 @@
     height: 6%;
     padding: 1%;
     margin-bottom: 10px; 
+    background-color: khaki;
     
 }
 
@@ -34,5 +46,13 @@
     border-radius: 10%;
     border: 3px solid rgb(255, 208, 119);
     font-weight: 700;
+}
+
+#outerform {
+    border: 3px solid rgb(250, 170, 170);
+    border-style: double;
+    box-shadow: 3px 3px 2px 2px rgb(68, 64, 28);
+    border-radius: 5px;
+    background-color: rgb(251, 234, 237);
 }
 

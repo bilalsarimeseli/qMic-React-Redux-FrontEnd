@@ -1,7 +1,8 @@
 import React from "react";
+import './Header.css'
 function Header() {
   return (
-    <nav className="navbar navbar-dark bg-primary">
+    <nav className="navbar navbar-dark bg-primary" id="navbar">
       <div className="row col-12 d-flex justify-content-center text-white">
         <span className="h3">Register</span>
       </div>

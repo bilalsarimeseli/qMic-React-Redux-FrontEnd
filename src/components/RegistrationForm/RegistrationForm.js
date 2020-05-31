@@ -8,6 +8,7 @@ import ACTIONS from "../../modules/action";
 import Button from 'react-bootstrap/Button';
 
 
+
 const styles = (theme) => ({
   root: {
     flexGrow: 1,
@@ -121,7 +122,7 @@ function RegistrationForm(props) {
     }
   };
   return (
-    <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
+    <div className="card col-12 col-lg-4 login-card mt-2 hv-center" id="outerform">
       <form>
         <div className="form-group text-left">
           <label htmlFor="exampleInputEmail1">Email address</label>
