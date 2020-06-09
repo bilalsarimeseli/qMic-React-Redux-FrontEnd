@@ -9,41 +9,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const reduxStore = configureStore(window.REDUX_INITIAL_DATA);
 
 const App = () => {
-  return <Router>
-     <ReduxProvider store={reduxStore}>
-          <div
-              className="containe\r d-flex align-items-center flex-column pages"
-              id="pathreg"
-              style={{
-                backgroundImage:
-                  "url(" +
-                  "https://images.unsplash.com/photo-1556761175-129418cb2dfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" +
-                  ")",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <Route exact path="/" component={RegistrationForm}></Route>
-            </div>
-            
-
-            <div
-              className="containe\r d-flex align-items-center flex-column pages"
-              id="pathlog"
-              style={{
-                backgroundImage:
-                  "url(" +
-                  "https://images.unsplash.com/photo-1556761175-129418cb2dfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" +
-                  ")",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <Route exact path="/login" component={LoginForm}></Route>
-            </div>
-            </ReduxProvider>
-  </Router>}
+  return (
+    <Router>
+      <ReduxProvider store={reduxStore}>
+        <Switch>       
+          <Route exact path="/" component={RegistrationForm}/>
+          <Route exact path="/login" component={LoginForm}/>
+        </Switch> 
+      </ReduxProvider>
+    </Router>
+  )
+}
 
 export default App;
