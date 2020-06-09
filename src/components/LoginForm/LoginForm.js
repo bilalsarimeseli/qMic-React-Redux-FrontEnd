@@ -4,6 +4,7 @@ import "./LoginForm.css";
 import { API_BASE_URL } from "../../constants/apiConstant";
 import { withRouter } from "react-router-dom";
 import Header from "../Header/HeaderLogin";
+import "../Header/Header.css"
 
 function LoginForm(props) {
   const [state, setState] = useState({
@@ -59,7 +60,7 @@ function LoginForm(props) {
       className="card col-12 col-lg-4 login-card mt-2 hv-center"
       id="formlogin"
     >
-      <Header />
+      <Header/>
       <form>
         <div className="form-group text-left" id="formgroup">
           <label htmlFor="exampleInputEmail1">
