@@ -1,66 +1,71 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-image: url("https://images.unsplash.com/photo-1590853641870-c4ef9dc02046?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+}
 
 .login-card {
-    min-height: 55vh;
-    padding-top: 20px;   
+  min-height: 55vh;
+  padding-top: 20px;
 }
 
 .registerMessage {
-    margin-top: 10vh;
+  margin-top: 10vh;
 }
 
 .loginText {
-    color: #9f15c8;
-    cursor: pointer;
-    font-size: 10px;
+  color: #9f15c8;
+  cursor: pointer;
+  font-size: 10px;
 }
 
 #emailHelp {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 600;
-    font-size: 12px;
-    color: lightgreen;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: lightgreen;
 }
 
 .successMessage {
-    color: rgb(2, 194, 2);
-    font-weight: bold;
+  color: rgb(2, 194, 2);
+  font-weight: bold;
 }
 
-
 #loginbutton {
-    padding-top: 1%;
-    margin-left: 37%;
-    color: rgb(167, 19, 68);
-    font-weight: 700;
-    font-size: large;
-    padding-bottom: 5px;
-    
+  padding-top: 1%;
+  margin-left: 37%;
+  color: rgb(167, 19, 68);
+  font-weight: 700;
+  font-size: large;
+  padding-bottom: 5px;
 }
 
 #formlogin {
-    border: 5px solid rgb(221, 248, 67);
-    border-style: solid;
-    box-shadow: 3px 3px 2px 2px rgb(68, 64, 28);
-    border-radius: 10px;
-    background-color: rgb(251, 234, 237);
-    top: 30px;
-    margin-bottom: 20px;
-    
+  border: 5px solid rgb(221, 248, 67);
+  border-style: solid;
+  box-shadow: 3px 3px 2px 2px rgb(68, 64, 28);
+  border-radius: 10px;
+  background-color: rgb(251, 234, 237);
+  top: 30px;
+  margin-bottom: 20px;
+  left: 32%;
+  top: 70px;
 }
 
-#formgroup, #formgroup2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
+#formgroup,
+#formgroup2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-#password, #email {
-    border: 2px solid mediumorchid;
+#password,
+#email {
+  border: 2px solid mediumorchid;
 }
 .registerMessage {
-    margin-top: 40px;
-    
-    
+  margin-top: 40px;
 }
-
-
-

@@ -1,6 +1,14 @@
-form {
-  margin-top: 12px;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-image: url("https://images.unsplash.com/photo-1556761175-129418cb2dfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .loginText {
   color: #8205a8;
   cursor: pointer;
@@ -13,7 +21,6 @@ form {
   padding-bottom: 3px;
   padding-top: 1px;
   font-weight: 700;
-  
 }
 
 #emailHelp {
@@ -45,7 +52,6 @@ form {
   font-weight: 600;
   color: rgb(88, 63, 228);
   margin-left: -55px;
-  
 }
 
 #registerbtn {
@@ -61,7 +67,6 @@ form {
 #loginbutton {
   padding-top: 1%;
   margin-left: 37%;
-  
 }
 
 #outerform {
@@ -72,6 +77,8 @@ form {
   background-color: rgb(251, 234, 237);
   padding-top: 20px;
   padding-bottom: 20px;
+  left: 32%;
+  top: 70px;
 }
 
 #email,
