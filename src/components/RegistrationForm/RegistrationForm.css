@@ -1,73 +1,81 @@
+form {
+  margin-top: 12px;
+}
 .loginText {
-    color: #8205a8;
-    cursor: pointer;
-    font-size: 10px;
+  color: #8205a8;
+  cursor: pointer;
+  font-size: 10px;
 }
 #login {
-    font-size: 15px;
-    text-align: center;
-    vertical-align: middle;
-    padding-bottom: 3px;
-    padding-top: 1px;
-    font-weight: 700;
-   
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  padding-bottom: 3px;
+  padding-top: 1px;
+  font-weight: 700;
+  
 }
 
 #emailHelp {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 700;
-    font-size: 11px;
-    color: lightgreen;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 11px;
+  color: lightgreen;
 }
 
 .successMessage {
-    color: rgb(2, 194, 2);
-    font-weight: bold;
+  color: rgb(2, 194, 2);
+  font-weight: bold;
 }
 
 .buttondiv {
-    border: 3px solid rgb(206, 34, 34);
-    border-radius: 30%;
-    box-shadow: 2px 2px rgb(31, 91, 93);
-    width: 42%;
-    height: 6%;
-    padding: 1%;
-    margin-bottom: 10px; 
-    background-color: khaki;
-    margin-left: -6%;
-    
+  border: 3px solid rgb(206, 34, 34);
+  border-radius: 30%;
+  box-shadow: 2px 2px rgb(31, 91, 93);
+  width: 42%;
+  height: 6%;
+  padding: 1%;
+  margin-bottom: 6px;
+  background-color: khaki;
+  margin-left: -6%;
+  margin-top: 7px;
 }
 
 #account {
-    font-weight: 600;
-    color: rgb(101, 86, 190);
-    margin-left: -55px;
-    
+  font-weight: 600;
+  color: rgb(88, 63, 228);
+  margin-left: -55px;
+  
 }
 
 #registerbtn {
-    background: rgb(226, 53, 226);
-    width: 150px;
-    font-size: 20px;
-    border-radius: 10%;
-    border: 3px solid rgb(255, 208, 119);
-    font-weight: 700;
-    margin-left: 30%;
-    
+  background: rgb(226, 53, 226);
+  width: 150px;
+  font-size: 20px;
+  border-radius: 10%;
+  border: 3px solid rgb(255, 208, 119);
+  font-weight: 700;
+  margin-left: 30%;
 }
 
 #loginbutton {
-    padding-top: 1%;
-    margin-left: 37%;
-    
+  padding-top: 1%;
+  margin-left: 37%;
+  
 }
 
 #outerform {
-    border: 3px solid rgb(250, 170, 170);
-    border-style: double;
-    box-shadow: 3px 3px 2px 2px rgb(68, 64, 28);
-    border-radius: 5px;
-    background-color: rgb(251, 234, 237);
+  border: 3px solid rgb(250, 170, 170);
+  border-style: double;
+  box-shadow: 3px 3px 2px 2px rgb(68, 64, 28);
+  border-radius: 5px;
+  background-color: rgb(251, 234, 237);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-
+#email,
+#password,
+#confirmPassword {
+  border: 2px solid rgb(78, 24, 187);
+}

@@ -23,12 +23,14 @@ const qMicReducer = (state = defaultState, action) => {
       return newState;
     }
 
-    case ACTIONS.Types.CREATE_MEETING: {
-      let item = action.payload;
-      let newItem = { id: state.items.length + 1, description: item };
-      let newState = _.cloneDeep(state);
-      newState.items.push(newItem);
-    }
+    case ACTIONS.Types.CREATE_MEETING:
+      {
+        let item = action.payload;
+        let newItem = { id: state.items.length + 1, description: item };
+        let newState = _.cloneDeep(state);
+        newState.items.push(newItem);
+      }
+      break;  //error prone 
 
     case ACTIONS.Types.END_MEETING: {
       let newState = _.cloneDeep(state);

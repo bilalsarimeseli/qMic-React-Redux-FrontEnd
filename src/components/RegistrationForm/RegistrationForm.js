@@ -3,11 +3,10 @@ import { connect } from "react-redux";
 import axios from "axios";
 import "./RegistrationForm.css";
 import { API_BASE_URL } from "../../constants/apiConstant";
-import { withStyles } from "@material-ui/core";
+import { withStyles} from "@material-ui/core";
 import ACTIONS from "../../modules/action";
-import Button from 'react-bootstrap/Button';
-
-
+import Button from "react-bootstrap/Button";
+import Header from "../Header/HeaderRegister";
 
 const styles = (theme) => ({
   root: {
@@ -121,11 +120,17 @@ function RegistrationForm(props) {
       props.showError("Passwords do not match");
     }
   };
+
   return (
-    <div className="card col-12 col-lg-4 login-card mt-2 hv-center" id="outerform">
+    <div
+      className="card col-12 col-lg-4 login-card mt-2 hv-center"
+      id="outerform"
+    ><Header/>
       <form>
         <div className="form-group text-left">
-          <label htmlFor="exampleInputEmail1">Email address</label>
+          <label htmlFor="exampleInputEmail1">
+            <b>Email address</b>
+          </label>
           <input
             type="email"
             className="form-control"
@@ -140,7 +145,9 @@ function RegistrationForm(props) {
           </small>
         </div>
         <div className="form-group text-left">
-          <label htmlFor="exampleInputPassword1">Password</label>
+          <label htmlFor="exampleInputPassword1">
+            <b>Password</b>
+          </label>
           <input
             type="password"
             className="form-control"
@@ -151,7 +158,9 @@ function RegistrationForm(props) {
           />
         </div>
         <div className="form-group text-left">
-          <label htmlFor="exampleInputPassword1">Confirm Password</label>
+          <label htmlFor="exampleInputPassword1">
+            <b>Confirm Password</b>
+          </label>
           <input
             type="password"
             className="form-control"
@@ -180,7 +189,11 @@ function RegistrationForm(props) {
       <div className="mt-2" id="loginbutton">
         <span id="account">Already have an account? </span>
         <span className="loginText" onClick={() => redirectToLogin()}>
-        <div className="buttondiv"><Button variant="link" id="login">Login here</Button></div>
+          <div className="buttondiv">
+            <Button variant="link" id="login">
+              Login here
+            </Button>
+          </div>
         </span>
       </div>
     </div>

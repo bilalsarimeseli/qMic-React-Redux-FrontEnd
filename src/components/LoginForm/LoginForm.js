@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./LoginForm.css";
-import { API_BASE_URL } from "../../constants/apiContants";
+import { API_BASE_URL } from "../../constants/apiConstant";
 import { withRouter } from "react-router-dom";
+import Header from "../Header/HeaderLogin";
 
 function LoginForm(props) {
   const [state, setState] = useState({
@@ -17,6 +18,7 @@ function LoginForm(props) {
       [id]: value,
     }));
   };
+
 
   const handleSubmitClick = (e) => {
     e.preventDefault();
@@ -53,10 +55,18 @@ function LoginForm(props) {
     props.updateTitle("Register");
   };
   return (
-    <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
+    <div
+      className="card col-12 col-lg-4 login-card mt-2 hv-center"
+      id="formlogin"
+    >
+      <Header />
       <form>
-        <div className="form-group text-left">
-          <label htmlFor="exampleInputEmail1">Email address</label>
+        <div className="form-group text-left" id="formgroup">
+          <label htmlFor="exampleInputEmail1">
+            <h5>
+              <b>Email address</b>
+            </h5>
+          </label>
           <input
             type="email"
             className="form-control"
@@ -70,8 +80,12 @@ function LoginForm(props) {
             We'll never share your email with anyone else.
           </small>
         </div>
-        <div className="form-group text-left">
-          <label htmlFor="exampleInputPassword1">Password</label>
+        <div className="form-group text-left" id="formgroup2">
+          <label htmlFor="exampleInputPassword1">
+            <h5>
+              <b>Password</b>
+            </h5>
+          </label>
           <input
             type="password"
             className="form-control"
@@ -81,10 +95,11 @@ function LoginForm(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="form-check"></div>
+        <div className="form-check" style={{ backgroundColor: "red" }}></div>
         <button
           type="submit"
           className="btn btn-primary"
+          id="loginbutton"
           onClick={handleSubmitClick}
         >
           Submit
@@ -98,9 +113,9 @@ function LoginForm(props) {
         {state.successMessage}
       </div>
       <div className="registerMessage">
-        <span>Dont have an account? </span>
+        <span>Don't have an account? </span>
         <span className="loginText" onClick={() => redirectToRegister()}>
-          Register
+          <b style={{ fontSize: "15px" }}>Register</b>
         </span>
       </div>
     </div>
