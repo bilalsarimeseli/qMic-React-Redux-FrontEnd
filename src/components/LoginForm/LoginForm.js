@@ -52,7 +52,7 @@ function LoginForm(props) {
     props.history.push("/home");
   };
   const redirectToRegister = () => {
-    props.history.push("/register");
+    props.history.push("http://52.26.150.183/api/v1/register");
     props.updateTitle("Register");
   };
   return (

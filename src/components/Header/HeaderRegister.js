@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css"
+import "../Header/Header.css"
 function Header() {
   return (
     <nav id="navbarr" className="navbar navbar-light bg-warning">

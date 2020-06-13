@@ -5,7 +5,6 @@ import LoginForm from "./components/LoginForm/LoginForm";
 import { Provider as ReduxProvider } from "react-redux";
 import configureStore from "./modules/store";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-//import { Button } from "reactstrap";
 const reduxStore = configureStore(window.REDUX_INITIAL_DATA);
 
 const App = () => {

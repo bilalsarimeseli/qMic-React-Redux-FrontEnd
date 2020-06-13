@@ -1,68 +1,15 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
 import axios from "axios";
 import "./RegistrationForm.css";
 import { API_BASE_URL } from "../../constants/apiConstant";
-import { withStyles} from "@material-ui/core";
-import ACTIONS from "../../modules/action";
 import Button from "react-bootstrap/Button";
 import Header from "../Header/HeaderRegister";
+import "../Header/Header.css";
+import { withRouter } from "react-router-dom";
 
-const styles = (theme) => ({
-  root: {
-    flexGrow: 1,
-    maxWidth: 752,
-  },
-  demo: {
-    backgroundColor: theme.palette.background.paper,
-  },
-  title: {
-    margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`,
-  },
-});
 
-// class RegistrationForm extends Component {
-//   state = {};
-//   generate = () => {
-//     return this.props.items.map((item) => (
-//       <ListItem key={item.id}>
-//         <ListItemText primary={item.description} />
-//         <ListItemSecondaryAction>
-//           <IconButton
-//             aria-label="Delete"
-//             onClick={this.handleDelete}
-//             value={item.id}
-//           >
-//             <DeleteIcon />
-//           </IconButton>
-//         </ListItemSecondaryAction>
-//       </ListItem>
-//     ));
-//   };
-// }
-
-const mapStateToProps = (state) => ({
-  items: state.items,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  register: (item) => dispatch(ACTIONS.register(item)),
-  login: (id) => dispatch(ACTIONS.login(id)),
-  createMeeting: (item) => dispatch(ACTIONS.createMeeting(item)),
-  endMeeting: (item) => dispatch(ACTIONS.endMeeting(item)),
-  handRaise: (item) => dispatch(ACTIONS.handRaise(item)),
-  checkRaise: (item) => dispatch(ACTIONS.checkHraise(item)),
-  permitHraise: (item) => dispatch(ACTIONS.permitHraise(item)),
-  nullifyHraisepermit: (item) => dispatch(ACTIONS.nullifyhraisepermit(item)),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withStyles(styles)(RegistrationForm));
-
-function RegistrationForm(props) {
-  const [state, setState] = useState({
+const RegistrationForm = (props) => {
+  const [state, setState ] = useState({
     email: "",
     password: "",
     confirmPassword: "",
@@ -75,15 +22,24 @@ function RegistrationForm(props) {
       [id]: value,
     }));
   };
+
+  const showError = () => {
+    console.log(this)
+  }
+
   const sendDetailsToServer = () => {
     if (state.email.length && state.password.length) {
-      props.showError(null);
+      showError(null);
       const payload = {
         email: state.email,
         password: state.password,
       };
+      const headers = {
+        'Access-Control-Allow-Origin': '*'
+    };
+
       axios
-        .post(API_BASE_URL + "register", payload)
+        .post(API_BASE_URL + "register", payload, {headers:headers})
         .then(function (response) {
           if (response.data.code === 200) {
             setState((prevState) => ({
@@ -92,9 +48,9 @@ function RegistrationForm(props) {
                 "Registration successful. Redirecting to home page..",
             }));
             redirectToHome();
-            props.showError(null);
+            showError(null);
           } else {
-            props.showError("Some error ocurred");
+            showError("Some error ocurred");
           }
         })
         .catch(function (error) {
@@ -125,7 +81,8 @@ function RegistrationForm(props) {
     <div
       className="card col-12 col-lg-4 login-card mt-2 hv-center"
       id="outerform"
-    ><Header/>
+    >
+      <Header />
       <form>
         <div className="form-group text-left">
           <label htmlFor="exampleInputEmail1">
@@ -198,6 +155,12 @@ function RegistrationForm(props) {
       </div>
     </div>
   );
+
 }
 
-// export default withRouter(RegistrationForm);
+
+  
+  
+
+
+export default withRouter(RegistrationForm);
